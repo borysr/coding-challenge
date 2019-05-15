@@ -12,8 +12,20 @@
  * Answer: [1, 4] Is the answer as 9 + 8 = target (17)
  *
  * @param {Array<Number>} numbers
+ * @param {Number} target
  * @return {Array<Number}
  */
 var twoSum = function(numbers, target) {
-    // TODO
+    for (let i = 0; i < numbers.length; i++) {
+        let rem = target - numbers[i];
+        for (let j = i; j < numbers.length; j++) {
+          if (numbers[j] === rem) {
+            return [i, j];
+          }
+        }
+      }
+      return [];
 };
+
+// twoSum([3, 9, 2, 11, 8, 23], 17);
+

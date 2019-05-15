@@ -9,5 +9,25 @@
  * @return {void}
  */
 var fizzBuzz = function() {
-    // TODO
+    for (let i = 1; i <= 100; i++) {
+        let s = '';
+    
+        if (i % 3 == 0) s += 'fizz';
+        if (i % 5 == 0) s += 'buzz';
+    
+        if (s !== '') console.log(s);
+    }
 };
+// fizzBuzz();
+
+var fizzBuzzWithNumbers = function() {
+    for (let i = 1; i <= 100; i++) {
+        let s = '';
+    
+        if (i % 3 == 0) s += 'fizz';
+        if (i % 5 == 0) s += 'buzz';
+    
+        if (s !== '') console.log(i, ' - ', s);
+    }
+};
+// fizzBuzzWithNumbers();

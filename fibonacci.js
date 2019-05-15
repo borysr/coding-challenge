@@ -8,5 +8,24 @@
  * @return {Array<Number>}
  */
 var fibonacciSequence = function(total) {
-    // TODO
+  if (total === undefined) return [];
+  let seq = []; // depending on definition of Fibonacci from different
+  // source may start with seq = '0'
+
+  if (total >= 1) seq.push(1);
+  if (total >= 2) seq.push(1);
+
+  if (total > 2) {
+    let n1 = 1;
+    let n2 = 1;
+    for (let i = 2; i < total; i++) {
+      let n3 = n1 + n2;
+      seq.push(n3);
+      n1 = n2;
+      n2 = n3;
+    }
+  }
+  return seq;
 };
+
+// console.log(fibonacciSequence(12));
